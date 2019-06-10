@@ -1,4 +1,4 @@
-class Questions
+class Question
   attr_accessor :correct_answer, :ask_question
 
   def initialize()

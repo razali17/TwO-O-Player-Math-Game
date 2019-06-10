@@ -1,4 +1,5 @@
 require "./Player"
+require "./Question"
 
 def start
   puts "New Game"
@@ -14,7 +15,7 @@ def runGame
   if @turns % 2 == 0 && @player2.alive?
     if @player2.alive?
       puts "----- NEW TURN -----"
-      q = Questions.new()
+      q = Question.new()
       puts "Player 1: #{q.ask_question}"
       answer = gets.chomp.to_i
       if answer == q.correct_answer
@@ -30,7 +31,7 @@ def runGame
   elsif @turns % 2 == 1 && @player1.alive?
     if @player1.alive?
       puts "----- NEW TURN -----"
-      q = Questions.new()
+      q = Question.new()
       puts "Player 2: #{q.ask_question}"
       answer = gets.chomp.to_i
       if answer == q.correct_answer
